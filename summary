@@ -1,0 +1,16 @@
+things done: 
+
+Created a pytorch model, from hugging face and created its database with custom FAQ and labels
+finetuned the bert base for this task and created a model for this
+
+Ran inference on this using Fast API and the curl command
+curl -X 'POST' \
+  'http://0.0.0.0:8000/predict/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "input_text": "What is your return policy?"
+}'
+
+Next Step : Write a front end to process request for the chatbot
+
