@@ -14,3 +14,7 @@ curl -X 'POST' \
 
 Next Step : Write a front end to process request for the chatbot
 
+run command to start the server : fastapi dev main.py
+
+Run the frontend and inference it
+

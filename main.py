@@ -14,10 +14,21 @@ from transformers import TrainingArguments, Trainer
 
 
 # Allow FastAPI to run in Jupyter environment
-nest_asyncio.apply()
+#nest_asyncio.apply()
 
 # Initialize the FastAPI app
 app = FastAPI()
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins; replace with specific URLs in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Define the input structure
 class RequestBody(BaseModel):
